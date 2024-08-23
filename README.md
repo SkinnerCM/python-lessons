@@ -8,7 +8,13 @@ Welcome to the Python Lessons repository! This repository contains a series of J
   - `lesson_01_basics.ipynb`: Introduction to Python basics, including variables, data types, and basic operations.
   - `lesson_02_control_flow.ipynb`: Control flow in Python, including if statements, loops, and functions.
   - `lesson_03_data_structures.ipynb`: Python data structures such as lists, dictionaries, sets, and tuples.
-  - ... *(add more as needed)*
+  - `lesson_04_pseudocode_and_mini_project.ipynb`: Using pseudocode to help write programs; mini project: staircase problem with loops and logic
+  - `lesson_05_functions_intro.ipynb`: Introduction to functions and scope
+  - `lesson_06_functions2.ipynb`: More on functions
+  - `lesson_07_functions3.ipynb`: Positional parameters versus keyword arguments
+  - `lesson_08_classes_intro.ipynb`: Introduction to classes
+  - `lesson_09_exception_handling.ipynb`: Try-except statements for handling potential errors without crashing a program
+  - `project_MathBlitz.ipynb`: Design and implement a program which presents math problems to users until they want to quit
 
 ## How to Use This Repository
 
