@@ -30,7 +30,7 @@ This repository is intended for students who are new to Python or programming in
 Contributions are welcome! If you find any issues or have suggestions for improvements, feel free to open an issue or submit a pull request. Please make sure to follow the contribution guidelines.
 
 ## License
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
 
 ## Contact
 If you have any questions or need further assistance, feel free to reach out via [email](mailto:tutor.cmskinner@gmail.com).
