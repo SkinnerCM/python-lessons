@@ -15,3 +15,8 @@ Welcome to the Python Lessons repository! This repository contains a series of J
 1. **Clone the Repository**: Use the following command to clone the repository to your local machine.
    ```bash
    git clone https://github.com/yourusername/python-lessons.git
+2. **Install Dependencies**: Make sure you have Jupyter installed. You can install it using pip:
+```bash
+   pip install jupyter
+3. **Run the Notebooks**: Navigate to the folder where you've cloned the repository and start Jupyter Notebook:
+```bash
