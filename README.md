@@ -14,9 +14,23 @@ Welcome to the Python Lessons repository! This repository contains a series of J
 
 1. **Clone the Repository**: Use the following command to clone the repository to your local machine.
    ```bash
-   git clone https://github.com/yourusername/python-lessons.git
+   git clone https://github.com/SkinnerCM/python_lessons.git
 2. **Install Dependencies**: Make sure you have Jupyter installed. You can install it using pip:
-```bash
+   ```bash
    pip install jupyter
 3. **Run the Notebooks**: Navigate to the folder where you've cloned the repository and start Jupyter Notebook:
-```bash
+   ```bash
+   jupyter notebook
+  From there, you can open and run any of the lesson notebooks.
+
+## Target Audience
+This repository is intended for students who are new to Python or programming in general. The lessons are beginner-friendly and progress from fundamental concepts to more advanced topics.
+
+## Contributing
+Contributions are welcome! If you find any issues or have suggestions for improvements, feel free to open an issue or submit a pull request. Please make sure to follow the contribution guidelines.
+
+## License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+## Contact
+If you have any questions or need further assistance, feel free to reach out via [email](mailto:tutor.cmskinner@gmail.com).
