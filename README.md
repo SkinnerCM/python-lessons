@@ -6,8 +6,8 @@ Welcome to the Python Lessons repository! This repository contains a series of J
 
 - **Notebooks by Topic**: Each Jupyter notebook in this repository covers a specific topic or concept in Python. The lessons are designed to be self-contained, allowing students to focus on one area at a time.
   - `lesson_01_basics.ipynb`: Introduction to Python basics, including variables, data types, and basic operations.
-  - `lesson_02_control_flow.ipynb`: Control flow in Python, including if statements, loops, and functions.
-  - `lesson_03_data_structures.ipynb`: Python data structures such as lists, dictionaries, sets, and tuples.
+  - `lesson_02_lists_and_strings.ipynb`: A look at the list and string composite data types and how to manipulate them.
+  - `lesson_03_control_flow.ipynb`: Logical comparisons, if/else statements and for and while loops.
   - `lesson_04_pseudocode_and_mini_project.ipynb`: Using pseudocode to help write programs; mini project: staircase problem with loops and logic
   - `lesson_05_functions_intro.ipynb`: Introduction to functions and scope
   - `lesson_06_functions2.ipynb`: More on functions
