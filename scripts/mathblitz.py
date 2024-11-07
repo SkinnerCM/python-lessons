@@ -1,234 +1,253 @@
 #!/usr/bin/env python3
 
-op_dict = {'add': ['Addition', 'adding', '+'],
-           'sub': ['Subtraction', 'subtracting', '-'],
-           'mult': ['Multiplicaiton', 'multiplying', '\u00D7'],
-           'div': ['Division', 'dividing', '\u00F7']
-               }
+class MathBlitz:
 
-def mathblitz():
-    
-    sp = '                                                        '
-    print('\n\n\n')
-    print(sp+"          ++++           |                         ")
-    print(sp+"          ++++           |                         ")
-    print(sp+"          ++++           |                         ")
-    print(sp+"   ++++++++++++++++++    |    |||||||||||||||||    ")
-    print(sp+"   ++++++++++++++++++    |    |||||||||||||||||    ")
-    print(sp+"          ++++           |                         ")
-    print(sp+"          ++++           |                         ")
-    print(sp+"          ++++           |                         ")
-    print(sp+"                         |                         ")
-    print(sp+" ________________________|_______________________  ")
-    print(sp+"                         |                         ")
-    print(sp+"                         |            _            ")              
-    print(sp+"       XXX    XXX        |           ( )           ")          
-    print(sp+"        XXX  XXX         |            ‾            ")
-    print(sp+"          XXXX           |      |||||||||||||      ")
-    print(sp+"        XXX  XXX         |            _            ")
-    print(sp+"       XXX    XXX        |           ( )           ")
-    print(sp+"                         |            ‾            ")
-    print(sp+"                         |                         ")
-    print("\n\n"+sp+"             ***Welcome to MathBlitz!!*** \n\n")
+    op_dict = {'add': ['Addition', 'adding', '+'],
+               'sub': ['Subtraction', 'subtracting', '-'],
+               'mult': ['Multiplicaiton', 'multiplying', '\u00D7'],
+               'div': ['Division', 'dividing', '\u00F7']
+                   }
+
+    def __init__(self):
+
+        self.score = 0 
+
+    def update_score(self, correct=True):
+
+        if correct:
+            self.score+=100
+        else:
+            self.score-=100
+
+        print('\nScore: '+ str(self.score))
+
+    def mathblitz(self):
 
         
-    main_loop = True
-    
-    input()
-    
-    while main_loop:
+        sp = '                                                        '
+        print('\n\n\n')
+        print(sp+"          ++++           |                         ")
+        print(sp+"          ++++           |                         ")
+        print(sp+"          ++++           |                         ")
+        print(sp+"   ++++++++++++++++++    |    |||||||||||||||||    ")
+        print(sp+"   ++++++++++++++++++    |    |||||||||||||||||    ")
+        print(sp+"          ++++           |                         ")
+        print(sp+"          ++++           |                         ")
+        print(sp+"          ++++           |                         ")
+        print(sp+"                         |                         ")
+        print(sp+" ________________________|_______________________  ")
+        print(sp+"                         |                         ")
+        print(sp+"                         |            _            ")              
+        print(sp+"       XXX    XXX        |           ( )           ")          
+        print(sp+"        XXX  XXX         |            ‾            ")
+        print(sp+"          XXXX           |      |||||||||||||      ")
+        print(sp+"        XXX  XXX         |            _            ")
+        print(sp+"       XXX    XXX        |           ( )           ")
+        print(sp+"                         |            ‾            ")
+        print(sp+"                         |                         ")
+        print("\n\n"+sp+"             ***Welcome to MathBlitz!!*** \n\n")
+
+
+        main_loop = True
         
-        print("\n\n\n")
-        print(sp+"Main menu: ")
-        print(sp+"----------")
+        input()
         
-        print(sp+"1) Addition ")
-        print(sp+"2) Subtraction ")
-        print(sp+"3) Multiplication ")
-        print(sp+"4) Division ")
-        print('\n')
-        
-        score=0
-        
-        print('Score: '+ str(score))
-    
-        
-        op = input(sp+"Which arithmetic operation would you like to practice? " 
-                  "(Enter 'Q' to quit) ")
-        
-        if op == 'Q' or op == 'q':
+        while main_loop:
             
-            main_loop = False
- 
-        elif op  == '1':
-
-            op_menu('add')
-
-        elif op  == '2':
-
-            op_menu('sub')
+            print("\n\n\n")
+            print(sp+"Main menu: ")
+            print(sp+"‾‾‾‾‾‾‾‾‾‾")
             
-        elif op  == '3':
-
-            op_menu('mult')
-            
-        elif op == '4':
-            op_menu('div')
-            
-        else:            
-            print('\n'+sp+"Please enter a digit 1-4 or 'Q' to quit! ")
+            print(sp+"1) Addition ")
+            print(sp+"2) Subtraction ")
+            print(sp+"3) Multiplication ")
+            print(sp+"4) Division ")
+            print('\n')
             
             
-
-
-def op_menu_message(op):
-
-    message = f'***Welcome to MathBlitz: {op_dict[op][0]}***'
-    print("\n\n" + message + " \n"+len(message)*"_"+"\n")
-    if op != 'div':
-          print(f"\nHow many digits would you like to practice {op_dict[op][1]}?") 
-    
-def num_gen(num_digit=None, numer_digit=None, denom_digit=None):
-    
-    import random as rnd
-    
-    if num_digit==None:
+            print('Score: '+ str(self.score))
         
-        num2 = rnd.randint(1,10**denom_digit)
-        
-        num1=10**100
-        
-        while num1/(10**numer_digit) > 1:
             
-            num1 = num2*rnd.randint(1,10**(numer_digit-denom_digit+1))
-    
-    else:
-        # generate the random numbers
-        num1 = rnd.randint(1,10**num_digit)
-        num2 = rnd.randint(1,10**num_digit)
-    
-    return num1, num2
-
-def op_menu(op):
-    
-
-    op_loop = True
-    
-    while op_loop:
-        op_menu_message(op)
-        
-        if op == 'div':
-            numer_digit = input("How many digits would you like the dividend to be?"
-                        "(or enter 'M' to return to the menu) ")
+            op = input(sp+"Which arithmetic operation would you like to practice? " 
+                      "(Enter 'Q' to quit) ")
             
-            if numer_digit == 'M' or numer_digit == 'm':
-                op_loop = False
-                break
-            
-            while type(numer_digit) != int:
+            if op.lower() == 'q':
                 
-                try:
-                    numer_digit = int(numer_digit)
-                except:
-                    numer_digit = input("Please enter only a positive integer!\n")
+                main_loop = False
+     
+            elif op in ['1','2','3','4']:
+
+                operation = ['add', 'sub', 'mult', 'div'][int(op)-1]
+                self.op_menu(operation)
                 
-            denom_digit = input("How many digits would you like the divisor to be? ")
-            
-            while type(denom_digit) != int:
+            else:            
+                print('\n'+sp+"Please enter a digit 1-4 or 'Q' to quit! ")
                 
-                try:
-                    denom_digit = int(denom_digit)
-                except:
-                    denom_digit = input("Please enter only a positive integer!\n")
-            
-            
-        else: 
-            
-            num_digit = input("(Enter a positive integer, or 'M' to return to the menu): ")
+
+    def op_menu_message(self, op):
+
+        message = f'***Welcome to MathBlitz: {self.op_dict[op][0]}***'
+        print("\n\n" + message + " \n"+len(message)*"_"+"\n")
+
+        if op != 'div':
+              print(f"\nHow many digits would you like to practice {self.op_dict[op][1]}?")
+
         
-            if num_digit == 'M' or num_digit == 'm':
-                
-                op_loop = False
-                break
+    def num_gen(self, num_digit=None, numer_digit=None, denom_digit=None):
+        
+        import random as rnd
+        
+        if num_digit==None:
             
-            while type(num_digit) != int:
+            num2 = rnd.randint(1,10**denom_digit)
+            
+            num1=10**100
+            
+            while num1/(10**numer_digit) > 1:
                 
+                num1 = num2*rnd.randint(1,10**(numer_digit-denom_digit+1))
+        
+        else:
+            # generate the random numbers
+            num1 = rnd.randint(1,10**num_digit)
+            num2 = rnd.randint(1,10**num_digit)
+        
+        return num1, num2
+
+    def op_menu(self, op):
+        
+        op_loop = True
+        
+        while op_loop:
+
+            self.op_menu_message(op)
+            
+            if op == 'div':
+
+                numer_digit = input("How many digits would you like the dividend to be?"
+                            "(or enter 'B' to return to the menu) ")
+                
+                if numer_digit.lower() == 'b':
+                    op_loop = False
+                    break
+                
+                while type(numer_digit) != int:
+                    
                     try:
-                        num_digit = int(num_digit)
-                    except:
-                        num_digit = input("Please enter only a positive integer!\n")
-        
+                        numer_digit = int(numer_digit)
+                    except ValueError:
+                        numer_digit = input("Please enter only a positive integer!\n")
+                    
+                denom_digit = input("How many digits would you like the divisor to be? ")
+                
+                while type(denom_digit) != int:
+                    
+                    try:
+                        denom_digit = int(denom_digit)
 
-        
-        # Initialize for inner while loop
-        op_solver = True
-
-        while op_solver:
+                    except ValueError:
+                        denom_digit = input("Please enter only a positive integer!\n")
+                
+                
+            else: 
+                
+                num_digit = input("(Enter a positive integer, or 'B' to return to the menu): ")
             
-            if op == 'div': 
-                num1, num2 = num_gen(numer_digit=numer_digit, denom_digit=denom_digit)
-                ans = num1/num2
+                if num_digit.lower() == 'b':
+                    
+                    op_loop = False
+                    break
                 
-            else:
+                while type(num_digit) != int:
+                    
+                        try:
+                            num_digit = int(num_digit)
+                        except ValueError:
+                            num_digit = input("Please enter only a positive integer!\n")
+            
+
+            
+            # Initialize for inner while loop
+            op_solver = True
+
+            while op_solver:
                 
-                num1, num2 = num_gen(num_digit=num_digit)
+                if op == 'div': 
+                    num1, num2 = self.num_gen(numer_digit=numer_digit, denom_digit=denom_digit)
+                    ans = num1/num2
+                    
+                else:
+                    
+                    num1, num2 = self.num_gen(num_digit=num_digit)
 
-                if op == 'add':
-                    ans = num1+num2
-                elif op == 'sub':
-                    ans = num1-num2
-                elif op == 'mult':
-                    ans = num1*num2
-                
+                    ans = self.calculate_answer(num1, num2, op)
+                    
+                op_solver = self.get_usr_answer(num1, num2, ans, op)
 
-            op_solver = get_usr_answer(num1, num2, ans, op)
 
-def get_usr_answer(num1, num2, ans, op):
-  
-    right_justify = max(len(str(num1)),len(str(num2)))
-    
-    usr_in = input(f'Hey! Can you solve this? \n \n  {num1:>{right_justify}}\n'
-                   f'{op_dict[op][2]} {num2:>{right_justify}}\n' 
-                   + (2+right_justify)*'-'+'\n')
-    
-    try:
-        usr_in = int(usr_in)
+    def calculate_answer(self, num1, num2, op):
+
+        if op == 'add':
+            ans = num1+num2
+
+        elif op == 'sub':
+            ans = num1-num2
+
+        elif op == 'mult':
+            ans = num1*num2
+
+        return ans
+
+
+    def get_usr_answer(self, num1, num2, ans, op):
+      
+        right_justify = max(len(str(num1)),len(str(num2)))
         
-    
-        if usr_in == ans:
+        usr_in = input(f'Hey! Can you solve this? \n \n  {num1:>{right_justify}}\n'
+                       f'{self.op_dict[op][2]} {num2:>{right_justify}}\n' 
+                       + (2+right_justify)*'-'+'\n')
+        
+        try:
+            usr_in = int(usr_in)
+            
+        
+            if usr_in == ans:
 
-            return answer_processing(num1, num2, ans, flag='C')
+                self.update_score()
+                return self.answer_processing(num1, num2, ans, op,'C')
 
+            else:
+
+                self.update_score(correct=False)                
+                return self.answer_processing(num1, num2, ans, op,'I')
+
+        except ValueError:
+
+            print("\n\nPlease enter integer values only!")
+            
+            return self.get_usr_answer(num1, num2, ans,op)
+
+
+    def answer_processing(self,num1, num2, ans, op, flag):
+        
+        if flag == 'C':
+            
+            usr_in = input("\nCongratulations! Enter 'B' to return to the previous menu, or enter any other key to try another problem: ")
+            
         else:
             
-            return answer_processing(num1, num2, ans, flag='I')
+            usr_in = input("\nOooof! Not quite. Enter 'B' to return to the previous menu, or enter any other key to try again: ")
 
-    except:
-
-        print("\n\nPlease enter integer values only!")
         
-        return get_usr_answer(num1, num2, ans)
+        if usr_in.lower() == 'b':
 
+            return False
 
-def answer_processing(num1, num2, ans, flag='C'):
-    
-    if flag == 'C':
+        elif flag == 'C':
+
+            return True 
+
+        else:
+            return self.get_usr_answer(num1, num2, ans, op)
         
-        usr_in = input("\nCongratulations! Enter 'M' to return to the previous menu, or enter any other key to try another problem: ")
-        
-    else:
-        
-        usr_in = input("\nOooof! Not quite. Enter 'M' to return to the previous menu, or enter any other key to try again: ")
-
-    
-    if usr_in == "M" or usr_in == 'm':
-
-        return False
-
-    elif flag == 'C':
-
-        return True 
-
-    else:
-        return get_usr_answer(num1, num2, ans)
-mathblitz()
+MathBlitz().mathblitz()
