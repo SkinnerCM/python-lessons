@@ -137,8 +137,9 @@ class MathBlitz:
             
             if op == 'div':
 
-                numer_digit = input("How many digits would you like the dividend to be?"
-                            "(or enter 'B' to return to the menu) ")
+                numer_digit = input("Please enter 2 or greater for the"
+                                    " number of digits of the dividend"
+                            " (or enter 'B' to return to the menu) ")
                 
                 if numer_digit.lower() == 'b':
                     op_loop = False
@@ -148,8 +149,14 @@ class MathBlitz:
                     
                     try:
                         numer_digit = int(numer_digit)
+                        
+                        if numer_digit < 2:
+                            numer_digit=input("Please enter a positive integer 2 or greater!\n")
+                        
                     except ValueError:
                         numer_digit = input("Please enter only a positive integer!\n")
+                
+                
                     
                 denom_digit = input("How many digits would you like the divisor to be? ")
                 
@@ -157,6 +164,11 @@ class MathBlitz:
                     
                     try:
                         denom_digit = int(denom_digit)
+                        
+                        if denom_digit > numer_digit:
+                            
+                            denom_digit=input(f"Please enter a positive integer {numer_digit} or "
+                                              "less!\n")
 
                     except ValueError:
                         denom_digit = input("Please enter only a positive integer!\n")
