@@ -122,8 +122,8 @@ class MathBlitz:
         
         else:
             # generate the random numbers
-            num1 = rnd.randint(1,10**num_digit)
-            num2 = rnd.randint(1,10**num_digit)
+            num1 = rnd.randint(1,10**num_digit-1)
+            num2 = rnd.randint(1,10**num_digit-1)
         
         return num1, num2
 
