@@ -53,8 +53,7 @@ class MathBlitz:
             
         menu = main_menu.MainMenu()
 
-        while menu.mathblitz(self
-                             ):
+        while menu.mathblitz(self):
             pass
 
 

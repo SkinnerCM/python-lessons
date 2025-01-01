@@ -50,8 +50,16 @@ class ProblemGenerator:
 
             else:
 
-                self.game_instance.update_score(correct=False)                
-                return input_processing.answer_processing(num1, num2, ans, self.op,'I')
+                self.game_instance.update_score(correct=False) 
+                
+                choice = input_processing.answer_processing(num1, num2, ans, self.op,'I')
+                
+                if choice == "try again":
+                    
+                    return self.get_usr_answer(num1, num2, ans)
+                
+                else:
+                    return choice
 
         except ValueError:
 
