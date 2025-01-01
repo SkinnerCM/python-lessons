@@ -35,7 +35,7 @@ class MathBlitz:
         self.score = 0 
         self.op_dict = {'add': ['Addition', 'adding', '+'],
                         'sub': ['Subtraction', 'subtracting', '-'],
-                        'mult': ['Multiplicaiton', 'multiplying', '\u00D7'],
+                        'mult': ['Multiplication', 'multiplying', '\u00D7'],
                         'div': ['Division', 'dividing', '\u00F7']
                         }
 
