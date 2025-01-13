@@ -39,12 +39,31 @@ class Vec:
         if len(self.elements) != len(other.elements):
             raise ValueError("Vectors must be the same length.")
         
-        dotprod = 0
+        dot_prod = 0
         
         for a,b in zip(self.elements, other.elements):
-            dotprod+=a*b
+            dot_prod+=a*b
 
-        return dotprod
+        return dot_prod
+    
+    def angle(self, other):
+        
+        from math import pi, acos
+        
+        if len(self.elements) != len(other.elements):
+            raise ValueError("Vectors must be the same length.")
+            
+        self_mag = self.magnitude()
+        other_mag = other.magnitude()
+            
+        dot_prod = self.dot(other)
+        
+        radians = acos(dot_prod/(self_mag*other_mag))
+        degrees = radians*180/pi
+        
+        return round(degrees,3)
+            
+        
 
     def magnitude(self):
         from math import sqrt
