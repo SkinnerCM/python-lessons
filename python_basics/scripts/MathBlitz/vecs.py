@@ -26,3 +26,26 @@ class Vec:
             raise ValueError("Vectors must be the same length for addition.")
             
         return Vec(*(a+b for a,b in zip(self.elements, other.elements)))
+    
+    def __sub__(self, other):
+        if not isinstance(other, Vec):
+            raise TypeError("Can only subtract Vec from Vec.")
+        if len(self.elements) != len(other.elements):
+            raise ValueError("Vectors must be the same length for subtraction.")
+        
+        return Vec(*(a-b for a,b in zip(self.elements, other.elements)))
+    
+    def dot(self, other):
+        if len(self.elements) != len(other.elements):
+            raise ValueError("Vectors must be the same length.")
+        
+        dotprod = 0
+        
+        for a,b in zip(self.elements, other.elements):
+            dotprod+=a*b
+
+        return dotprod
+
+    def magnitude(self):
+        from math import sqrt
+        return sqrt(self.dot(self))
