@@ -1,4 +1,4 @@
-# Python Lessons for Students
+# Introductory Python Lessons
 
 Welcome to the Python Lessons repository! This repository contains a series of Jupyter notebooks designed to teach Python programming to students. Each lesson is organized by topic and is aimed at helping learners develop a strong foundation in Python.
 
